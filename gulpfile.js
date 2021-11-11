@@ -1,34 +1,32 @@
-const gulp = require("gulp");
-const gap = require("gulp-append-prepend");
+const gulp = require('gulp');
+const gap = require('gulp-append-prepend');
 
-gulp.task("licenses", async function () {
-  // this is to add Creative Tim licenses in the production mode for the minified js
+gulp.task('licenses', async function () {
+  // this is to add Nairo Mudumane licenses in the production mode for the minified js
   gulp
-    .src("build/static/js/*chunk.js", { base: "./" })
+    .src('build/static/js/*chunk.js', { base: './' })
     .pipe(
       gap.prependText(`/*!
 
 =========================================================
-* Black Dashboard React - v1.2.0
+* Black Dashboard React - v0.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/black-dashboard-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+* Product source: https://github.com/nairo-mudumane/takdir-admin-dashboard/black-dashboard-react
+* Copyright 2021 Nairo Mudumane (https://nairomudumane.vercel.app/)
 * Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
 
-* Coded by Creative Tim
+* Coded by Nairo Mudumane
 
 =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */`)
     )
-    .pipe(gulp.dest("./", { overwrite: true }));
+    .pipe(gulp.dest('./', { overwrite: true }));
 
-  // this is to add Creative Tim licenses in the production mode for the minified html
+  // this is to add Nairo Mudumane licenses in the production mode for the minified html
   gulp
-    .src("build/index.html", { base: "./" })
+    .src('build/index.html', { base: './' })
     .pipe(
       gap.prependText(`<!--
 
@@ -36,11 +34,11 @@ gulp.task("licenses", async function () {
 * Black Dashboard React - v1.2.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/black-dashboard-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
+* Product source: https://github.com/nairo-mudumane/takdir-admin-dashboard/black-dashboard-react
+* Copyright 2020 Nairo Mudumane (https://www.nairomudumane.vercel.app)
+* Licensed under MIT (https://github.com/nairo-mudumane/takdir-admin-dashboard/black-dashboard-react/blob/master/LICENSE.md)
 
-* Coded by Creative Tim
+* Coded by Nairo Mudumane
 
 =========================================================
 
@@ -48,11 +46,11 @@ gulp.task("licenses", async function () {
 
 -->`)
     )
-    .pipe(gulp.dest("./", { overwrite: true }));
+    .pipe(gulp.dest('./', { overwrite: true }));
 
-  // this is to add Creative Tim licenses in the production mode for the minified css
+  // this is to add Nairo Mudumane licenses in the production mode for the minified css
   gulp
-    .src("build/static/css/*chunk.css", { base: "./" })
+    .src('build/static/css/*chunk.css', { base: './' })
     .pipe(
       gap.prependText(`/*!
 
@@ -60,11 +58,11 @@ gulp.task("licenses", async function () {
 * Black Dashboard React - v1.2.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/black-dashboard-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
+* Product source: https://github.com/nairo-mudumane/takdir-admin-dashboard/black-dashboard-react
+* Copyright 2020 Nairo Mudumane (https://www.nairomudumane.vercl.app)
+* Licensed under MIT (https://github.com/nairo-mudumane/takdir-admin-dashboard/black-dashboard-react/blob/master/LICENSE.md)
 
-* Coded by Creative Tim
+* Coded by Nairo Mudumane
 
 =========================================================
 
@@ -72,6 +70,6 @@ gulp.task("licenses", async function () {
 
 */`)
     )
-    .pipe(gulp.dest("./", { overwrite: true }));
+    .pipe(gulp.dest('./', { overwrite: true }));
   return;
 });

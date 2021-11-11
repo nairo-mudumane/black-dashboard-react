@@ -1,7 +1,5 @@
 # [Black Dashboard React]
 
-
-
 ![version](https://img.shields.io/badge/version-0.0.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 

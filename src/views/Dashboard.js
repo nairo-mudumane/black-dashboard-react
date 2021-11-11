@@ -1,25 +1,8 @@
-/*!
-
-=========================================================
-* Black Dashboard React v1.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/black-dashboard-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-import React from "react";
+import React from 'react';
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames';
 // react plugin used to create charts
-import { Line, Bar } from "react-chartjs-2";
+import { Line, Bar } from 'react-chartjs-2';
 
 // reactstrap components
 import {
@@ -40,7 +23,7 @@ import {
   Row,
   Col,
   UncontrolledTooltip,
-} from "reactstrap";
+} from 'reactstrap';
 
 // core components
 import {
@@ -48,10 +31,10 @@ import {
   chartExample2,
   chartExample3,
   chartExample4,
-} from "variables/charts.js";
+} from 'variables/charts.js';
 
 function Dashboard(props) {
-  const [bigChartData, setbigChartData] = React.useState("data1");
+  const [bigChartData, setbigChartData] = React.useState('data1');
   const setBgChartData = (name) => {
     setbigChartData(name);
   };
@@ -74,13 +57,13 @@ function Dashboard(props) {
                     >
                       <Button
                         tag="label"
-                        className={classNames("btn-simple", {
-                          active: bigChartData === "data1",
+                        className={classNames('btn-simple', {
+                          active: bigChartData === 'data1',
                         })}
                         color="info"
                         id="0"
                         size="sm"
-                        onClick={() => setBgChartData("data1")}
+                        onClick={() => setBgChartData('data1')}
                       >
                         <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
                           Accounts
@@ -94,10 +77,10 @@ function Dashboard(props) {
                         id="1"
                         size="sm"
                         tag="label"
-                        className={classNames("btn-simple", {
-                          active: bigChartData === "data2",
+                        className={classNames('btn-simple', {
+                          active: bigChartData === 'data2',
                         })}
-                        onClick={() => setBgChartData("data2")}
+                        onClick={() => setBgChartData('data2')}
                       >
                         <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
                           Purchases
@@ -111,10 +94,10 @@ function Dashboard(props) {
                         id="2"
                         size="sm"
                         tag="label"
-                        className={classNames("btn-simple", {
-                          active: bigChartData === "data3",
+                        className={classNames('btn-simple', {
+                          active: bigChartData === 'data3',
                         })}
-                        onClick={() => setBgChartData("data3")}
+                        onClick={() => setBgChartData('data3')}
                       >
                         <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
                           Sessions
@@ -162,7 +145,7 @@ function Dashboard(props) {
               <CardHeader>
                 <h5 className="card-category">Daily Sales</h5>
                 <CardTitle tag="h3">
-                  <i className="tim-icons icon-delivery-fast text-primary" />{" "}
+                  <i className="tim-icons icon-delivery-fast text-primary" />{' '}
                   3,500€
                 </CardTitle>
               </CardHeader>
